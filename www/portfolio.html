@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e18cff',
+                        secondary: '#100b04',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; text-transform: lowercase; }
+    </style>
+</head>
+<body class="bg-white text-secondary">
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">logo</div>
+            <ul class="flex gap-6">
+                <li><a href="#home" class="hover:text-primary">home</a></li>
+                <li><a href="#about" class="hover:text-primary">about</a></li>
+                <li><a href="#skills" class="hover:text-primary">skills</a></li>
+                <li><a href="#experience" class="hover:text-primary">experience</a></li>
+                <li><a href="#contact" class="hover:text-primary">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-4">
+        <h1 class="text-5xl font-bold mb-4">welcome to my portfolio</h1>
+        <p class="text-xl mb-8">frontend developer & ui designer</p>
+        <a href="#about" class="animate-bounce text-3xl text-primary">↓</a>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">about me</h2>
+            <div class="flex flex-wrap items-center gap-12">
+                <div class="flex-1 min-w-[300px]">
+                    <img src="https://via.placeholder.com/400" alt="Profile" class="rounded-lg w-full">
+                    <p class="text-center mt-4">passionate about creating beautiful interfaces</p>
+                </div>
+                <div class="flex-1 min-w-[300px]">
+                    <h3 class="text-2xl font-bold mb-4">hello!</h3>
+                    <p class="leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg text-center">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="font-bold">html & css</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="font-bold">javascript</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg text-center">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="font-bold">ui design</h3>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg text-center">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="font-bold">responsive design</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative pl-8 border-l-2 border-primary">
+                    <div class="mb-12">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px]"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-primary font-bold">2023</div>
+                            <h3 class="text-xl font-bold">senior frontend developer</h3>
+                            <div class="text-gray-600 mb-2">tech company</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="mb-12">
+                        <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px]"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-primary font-bold">2021</div>
+                            <h3 class="text-xl font-bold">frontend developer</h3>
+                            <div class="text-gray-600 mb-2">startup</div>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative cursor-pointer" onclick="openModal('project1')">
+                    <img src="https://via.placeholder.com/300" alt="Project 1" class="w-full rounded-lg">
+                    <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                        <h3 class="text-white font-bold">project 1</h3>
+                    </div>
+                </div>
+                <!-- More project items... -->
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/80">view more</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">contact</h2>
+            <div class="flex flex-wrap gap-12">
+                <div class="flex-1 min-w-[300px]">
+                    <form class="space-y-4">
+                        <input type="text" placeholder="name" class="w-full p-2 rounded border">
+                        <input type="email" placeholder="email" class="w-full p-2 rounded border">
+                        <input type="tel" placeholder="phone" class="w-full p-2 rounded border">
+                        <textarea placeholder="message" rows="4" class="w-full p-2 rounded border"></textarea>
+                        <button type="submit" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/80">send message</button>
+                    </form>
+                </div>
+                <div class="flex-1 min-w-[300px]">
+                    <div class="mb-6">
+                        <p class="leading-relaxed">Let's work together! Feel free to reach out through any platform.</p>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="font-bold mb-4">follow me</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-2xl hover:text-primary">📱</a>
+                            <a href="#" class="text-2xl hover:text-primary">💼</a>
+                            <a href="#" class="text-2xl hover:text-primary">🐦</a>
+                        </div>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239013.39784349396!2d-48.35913385!3d-18.9146078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4450c10bbcd55%3A0x34f2f6aaf8d7c3b7!2sUberl%C3%A2ndia%2C%20MG!5e0!3m2!1sen!2sbr!4v1620000000000!5m2!1sen!2sbr"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white py-4 text-center">
+        <p>© 2024 portfolio. all rights reserved.</p>
+    </footer>
+
+    <!-- Modal Template -->
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold" id="modalTitle">project title</h3>
+                <button onclick="closeModal()" class="text-2xl">&times;</button>
+            </div>
+            <img id="modalImage" src="" alt="" class="w-full rounded-lg mb-4">
+            <p id="modalDescription" class="mb-4">project description</p>
+            <a id="modalUrl" href="#" target="_blank" class="text-primary hover:underline">view project</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal(projectId) {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Add logic to populate modal content based on projectId
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
